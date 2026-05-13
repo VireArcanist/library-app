@@ -9,9 +9,12 @@ public class Book extends Medium implements Lendable {
     @Override
     public void lend() {
         if (isLent) {
-            System.out.println("You have lent: " + title);
-        } else {
             System.out.println("Sorry, " + title + " is already lent out.");
+
+        } else {
+            isLent = true;
+            System.out.println("You have lent: " + title);
+
         }
     }
     // Method to return the book, which sets the isLent status to false.
